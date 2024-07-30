@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: blue;
+            color: aliceblue;
+            text-align: center;
+            align-content: center;
+            height: 100px;
+        }
+
+        .input {
+            background-color: rgb(247, 204, 147);
+            font-size: 20px;
+            height: 300px;
+
+
+        }
+
+        .select {
+            position: relative;
+            left: 650px;
+            top: 20px;
+            font-size: 30px;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            background-color: blue;
+            color: wheat;
+            border-radius: 10px;
+        }
+
+        .empty {
+            background-color: rgb(100, 100, 243);
+            width: 100%;
+            height: 170px;
+        }
+        table{
+            border: 5px solid black;
+            width: 100%;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>Add a new transaction</h1>
+        </div>
+
+        <div class="input">
+            <div class="select">
+                Type: <input type="text" id="input1" required><br> <br>
+                Name: <input type="text" id="input2" required> <br><br>
+                Amount: <input type="text" id="input3" required> <br><br>
+                <button type="submit" id="but">Add to transactions</button>
+            </div>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+    <div class="empty"></div>
+    <table >
+        <tr >
+            <td>Type</td>
+            
+            <td>Name</td>
+           
+            <td>Amount</td>
+            
+            <td>Delete</td>
+            
+        </tr>
+        
+    </table>
+    <TABLE>
+        <tr>
+            <td>
+                <span id="output1"></span>
+            </td> 
+
+            <td >
+                <div id="output2"></div>
+             </td>
+
+             <td>
+                <div  id="output3"></div>
+            </td>
+
+        </tr>
+    </TABLE>
+    <script>
+        const inputbox1 = document.getElementById("input1");
+        const inputbox2 = document.getElementById("input2");
+        const inputbox3 = document.getElementById("input3");
+        const button = document.getElementById("but");
+        const outputbox1 = document.getElementById("output1");
+        const outputbox2 = document.getElementById("output1");
+        const outputbox3 = document.getElementById("output1");
+
+        button.addEventListener('click', () => {
+            const inputvalue1 = inputbox1.value;
+            outputbox1.innerHTML += inputvalue1;
+            inputbox.value = "";
+            
+        })
+        button.addEventListener('click', () => {
+            const inputvalue2 = inputbox2.value;
+            outputbox2.innerHTML += inputvalue2;
+            inputbox.value = "";
+            
+        })
+        button.addEventListener('click', () => {
+            const inputvalue3 = inputbox3.value;
+            outputbox3.innerHTML += inputvalue3;
+            inputbox.value = "";
+            
+        })
+
+    </script>
+</body>
+
+</html>
